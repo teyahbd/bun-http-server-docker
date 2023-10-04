@@ -3,7 +3,9 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "start": "bun run index.ts"
+    "start": "bun run index.ts",
+    "build:container": "docker build -t bun-http-server-docker .",
+    "start:container": "docker run -dp 127.0.0.1:3000:3000 bun-http-server-docker"
   },
   "devDependencies": {
     "bun-types": "latest"
